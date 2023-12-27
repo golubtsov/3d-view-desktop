@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="./../static/p5js/p5.js"></script>
+    <script src="./../static/p5js/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../static/css/output.css" />
+    <title>Средство просмотра 3D</title>
+  </head>
+
+  <body>
+    <main></main>
+
+    <div
+      id="window-open-settings"
+      class="absolute top-5 right-5 hidden w-fit gap-4 flex flex-col bg-white border rounded-lg shadow-md"
+    >
+      <button id="btn-open-settings" class="py-2 px-4">&larr;</button>
+    </div>
+
+    <div
+      id="window-settings"
+      class="absolute top-5 right-5 w-fit p-5 gap-4 flex flex-col bg-white border rounded-lg shadow-md"
+    >
+      <div>
+        <div class="mt-2">
+          <label
+            for="path-to-file"
+            class="flex relative mb-2 text-sm items-center font-medium text-gray-900"
+          >
+            <span class="flex flex-1">Путь до файла</span>
+            <button id="btn-close-window-settings" class="flex -mt-5 text-lg">
+              &rarr;
+            </button>
+          </label>
+          <input
+            name="path-to-file"
+            id="path-to-file"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="colot" class="block mb-2 text-sm font-medium text-gray-900"
+          >Цвет модели</label
+        >
+        <input
+          type="color"
+          name="colot"
+          id="input-color"
+          value="#77e45cee"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm block w-full"
+        />
+      </div>
+
+      <div>
+        <button
+          id="btn-start-pos"
+          class="bg-orange-500 hover:bg-orange-400 text-white rounded-md px-3 py-2"
+        >
+          Исходное положение
+        </button>
+      </div>
+    </div>
+
+    <script src="./../static/js/settings.js"></script>
+    <script src="./../static/js/sketch.js"></script>
+  </body>
+</html>
