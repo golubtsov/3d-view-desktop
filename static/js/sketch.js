@@ -88,13 +88,14 @@ function draw() {
     angleY += (mouseY - pmouseY) * -0.01;
   }
 
-  ambientLight(60);
-  lights();
-  specularMaterial(250);
-  shininess(50);
-
   rotateX(angleY);
   rotateZ(angleX);
+
+  ambientLight(255);
+  pointLight(255, 255, 255, 400, 0, 400);
+  normalMaterial();
+  shininess(200);
+  specularMaterial(200, 200, 255);
 
   fill(color);
 
