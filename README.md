@@ -9,7 +9,10 @@
 ## Установка
 
 ```
-git clone https://github.com/golubtsov/3d-view-p5js-desktop.git
+git clone https://github.com/golubtsov/3d-view-desktop.git
+
+cd 3d-view-desktop
+
 npm i
 ```
 
