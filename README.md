@@ -2,9 +2,9 @@
 
 ## Демонстрация
 
-![Приложение](./docs/images/app-1.png)
+![Приложение](./docs/images/model.png)
 
-![Приложение](./docs/images/app-2.png)
+![Приложение](./docs/images/model1.png)
 
 ## Установка
 

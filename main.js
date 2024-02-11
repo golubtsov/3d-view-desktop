@@ -14,6 +14,7 @@ const createWindow = () => {
   });
 
   mainWindow.loadFile("./static/index.html");
+  mainWindow.maximize(true);
 
   // mainWindow.webContents.openDevTools();
 };
