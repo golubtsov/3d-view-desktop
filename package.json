@@ -4,6 +4,7 @@
   "description": "Средство просмотра 3D моделей на ElectronJS",
   "main": "main.js",
   "scripts": {
+    "tailwind": "npx tailwindcss -i ./static/css/style.css -o ./static/css/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=static/images/icon.icns --prune=true --out=release-builds",

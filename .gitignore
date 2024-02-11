@@ -4,3 +4,4 @@
 /.vscode
 .env
 /release-builds
+/static/css/output.css

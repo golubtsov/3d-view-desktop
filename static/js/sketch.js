@@ -23,10 +23,11 @@ inputColor.addEventListener("change", (event) => {
   color = event.target.value;
 });
 
-// ======================= INPUT для ввода пути файла до модели ======================
+// ======================= INPUT для ввода пути файла до модели и кнопка загрузки ======================
 
 const pathToFile = document.getElementById("path-to-file");
-pathToFile.addEventListener("focusout", () => {
+const btnUpload = document.getElementById("btn-upload");
+btnUpload.addEventListener("click", () => {
   model1 = pathToFile.value;
   preload();
 });
@@ -65,24 +66,6 @@ function draw() {
 
   cam.setPosition(camPosX, camPosY, camPos);
 
-  if (keyIsPressed) {
-    if (keyCode === LEFT_ARROW) {
-      camPosX += 10;
-    }
-
-    if (keyCode === RIGHT_ARROW) {
-      camPosX -= 10;
-    }
-
-    if (keyCode === DOWN_ARROW) {
-      camPosY -= 10;
-    }
-
-    if (keyCode === UP_ARROW) {
-      camPosY += 10;
-    }
-  }
-
   if (mouseIsPressed) {
     angleX += (mouseX - pmouseX) * -0.01;
     angleY += (mouseY - pmouseY) * -0.01;
@@ -106,4 +89,28 @@ function draw() {
 
 function mouseWheel(event) {
   camPos += event.delta / 10;
+}
+
+function keyPressed() {
+  if (keyIsPressed) {
+    if (keyCode === LEFT_ARROW) {
+      camPosX += 10;
+    }
+
+    if (keyCode === RIGHT_ARROW) {
+      camPosX -= 10;
+    }
+
+    if (keyCode === DOWN_ARROW) {
+      camPosY -= 10;
+    }
+
+    if (keyCode === UP_ARROW) {
+      camPosY += 10;
+    }
+  }
+
+  if (keyCode === 83) {
+    saveCanvas("model", "png");
+  }
 }
